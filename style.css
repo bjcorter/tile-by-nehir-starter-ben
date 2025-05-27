@@ -1,49 +1,75 @@
-/* 🌿 Tile by Nehir – Starter CSS
-   This stylesheet adds simple styling to support your layout.
-   You'll enhance the layout further using Bootstrap during the LiveLab.
-*/
+/* 🌈 Tile by Nehir – Middle Eastern Artsy Revamp */
 
-/* Set a soft textured background for the whole page */
+/* Use a vibrant geometric background pattern */
 body {
-  background-image: url('assets/offwhite-background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('assets/mosaic-bg.png'), linear-gradient(135deg, #f9e7d2 0%, #f3c98b 100%);
+  background-size: 400px, cover;
+  background-repeat: repeat, no-repeat;
   background-attachment: fixed;
-  font-family: sans-serif;
-  padding: 16px; /* Adds space around edges on small screens */
+  font-family: 'Scheherazade New', 'Playfair Display', serif;
+  padding: 16px;
+  min-height: 100vh;
 }
 
-/* Header polish */
+/* Header polish: ornate, colorful, and elegant */
 h1 {
-  padding: 8px;
-  border-radius: 4px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #eab676 0%, #b5838d 100%);
+  color: #3a2c1a;
+  font-family: 'Scheherazade New', 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 24px rgba(186, 133, 141, 0.15);
+  border: 4px solid #b5838d;
+  margin-bottom: 32px;
 }
 
 /* Limit image dimensions so tiles don’t overflow the layout */
 img {
   max-height: 250px;
   max-width: 250px;
+  border-radius: 18px;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  box-shadow: 0 2px 16px rgba(186, 133, 141, 0.10);
 }
 
-/* Optional decorative border for each tile */
+/* Decorative border for each tile: ornate, colorful frame */
 .border-tile {
-  border: 20px solid transparent;
-  border-image: url('assets/wood.jpg') 30 round;
-  padding: 5px;
-  background-color: white;
+  border: 14px solid transparent;
+  border-image: url('assets/mosaic-border.png') 40 round;
+  padding: 8px;
+  background-color: #fffbe6;
+  box-shadow: 0 4px 24px rgba(234, 182, 118, 0.12);
 }
 
-/* Optional caption style if you add labels under your tiles */
+/* Subtle zoom and glow on hover for images */
+img:hover, img:focus {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px 0 rgba(186, 133, 141, 0.25), 0 0 0 4px #eab67655;
+  z-index: 2;
+}
+
+/* Optional caption style: elegant and colorful */
 .tile-caption {
   text-align: center;
-  margin-top: 8px;
-  font-size: 14px;
-  color: #444;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #b5838d;
+  font-family: 'Scheherazade New', 'Playfair Display', serif;
+  letter-spacing: 1px;
+  background: rgba(255, 245, 230, 0.7);
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: inline-block;
 }
 
-/* 💡 Optional Enhancements:
-   - Try adding a hover effect with transform and box-shadow
-   - Use border-radius for rounded image corners
-   - Combine with Bootstrap utilities like p-3, mb-4, text-center
-   - Ask AI: “Add a subtle zoom effect on image hover”
-*/
+/* Add a subtle border radius and shadow to grid containers if used */
+.row, .container {
+  border-radius: 18px;
+  box-shadow: 0 2px 24px rgba(58, 44, 26, 0.06);
+  background: rgba(255,255,255,0.75);
+}
+
+/* Import a Middle Eastern inspired font */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&family=Playfair+Display:wght@700&display=swap');
